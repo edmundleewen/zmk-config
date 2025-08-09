@@ -25,7 +25,7 @@
 
         ios_layer {
             bindings = <
-                &kp LG(X)
+                &kp LG(LS(Z))
                 &kp LG(Z)
                 &to DEFAULT
             >;
