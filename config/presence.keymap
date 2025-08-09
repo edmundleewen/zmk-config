@@ -17,8 +17,8 @@
 
         default_layer {
             bindings = <
-                &kp X
-                &kp Z
+                &kp W
+                &kp A
                 &to IOS
             >;
         };
