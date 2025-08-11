@@ -11,17 +11,17 @@
 
         default_layer {
             bindings = <
-                &kp A   &kp D   &kp H
-                &kp B   &kp E   &kp I
-                &kp C   &kp F   &to IOS
+                &kp R   &kp SPACE   &kp E
+                &kp J   &kp W   &kp L
+                &kp A   &kp S   &kp D
             >;
         };
 
         ios_layer {
             bindings = <
-                &kp J   &kp M   &kp P
+                &to DEFAULT   &kp M   &kp A
                 &kp K   &kp N   &kp Q
-                &kp L   &kp O   &to DEFAULT
+                &kp L   &kp O   &to Z
             >;
         };
     };
