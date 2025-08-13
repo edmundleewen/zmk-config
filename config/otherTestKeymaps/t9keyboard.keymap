@@ -5,18 +5,18 @@
 / {
 
     behaviors {
-        ab: t9ab {
+        aby: t9aby {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp A>, <&kp B>;
+            bindings = <&kp A>, <&kp B>, <&kp Y>;
         };
 
-        cb: t9cb {
+        cdw: t9cdw {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp C>, <&kp D>;
+            bindings = <&kp C>, <&kp D>, <&kp W>;
         };
 
         efg: t9efg {
@@ -26,18 +26,18 @@
             bindings = <&kp E>, <&kp F>, <&kp G>;
         };
 
-        hijk: t9hijk {
+        hij: t9hij {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp H>, <&kp I>, <&kp J>, <&kp K>;
+            bindings = <&kp H>, <&kp I>, <&kp J>;
         };
 
-        lm: t9lm {
+        lmx: t9lmx {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp L>, <&kp M>;
+            bindings = <&kp L>, <&kp M>, <&kp X>;
         };
 
         nopq: t9nopq {
@@ -47,18 +47,18 @@
             bindings = <&kp N>, <&kp O>, <&kp P>, <&kp Q>;
         };
 
-        rs: t9rs {
+        rsk: t9rsk {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp R>, <&kp S>;
+            bindings = <&kp R>, <&kp S>, <&kp K>;
         };
 
-        tuvwxyz: t9tuvwxyz {
+        tuvz: t9tuvz {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp T>, <&kp U>, <&kp V>, <&kp W>, <&kp X>, <&kp Y>, <&kp Z>;
+            bindings = <&kp T>, <&kp U>, <&kp V>, <&kp Z>;
         };
 
         spDlt: t9spDlt {
@@ -74,9 +74,9 @@
 
         default_layer {
             bindings = <
-                &ab     &cb         &efg
-                &hijk   &lm         &nopq
-                &rs     &tuvwxyz    &spDlt
+                &aby     &cdw       &efg
+                &hij     &lmx       &nopq
+                &rsk     &tuvz      &spDlt
             >;
         };
 
