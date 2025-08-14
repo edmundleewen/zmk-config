@@ -1,3 +1,11 @@
+/*
+
+aby    cdw      efg
+hij    lmx      nopq
+rsk    tuvz     space / delete
+
+*/
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
