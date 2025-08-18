@@ -11,114 +11,53 @@ rsk    tuvz     space / delete
 #include <dt-bindings/zmk/bt.h>
 
 #define DEFAULT 0
-#define TYPELAYER 1
+#define alpha1 1
+#define alpha2 2
+#define alpha3 3
+#define alpha4 4
 
 / {
-
-    combos {
-        compatible = "zmk,combos";
-        combo_layerUp {
-            timeout-ms = <50>;
-            key-positions = <0 1 2>;
-            bindings = <&to TYPELAYER>;
-        };
-
-        combo_layerDown {
-            timeout-ms = <50>;
-            key-positions = <6 7 8>;
-            bindings = <&to DEFAULT>;
-        };
-
-        combo_layerBootLoader {
-            timeout-ms = <50>;
-            key-positions = <3 4 5>;
-            bindings = <&bootloader>;
-        };
-    };
-
-    behaviors {
-        aby: t9aby {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp A>, <&kp B>, <&kp Y>;
-        };
-
-        cdw: t9cdw {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp C>, <&kp D>, <&kp W>;
-        };
-
-        efg: t9efg {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp E>, <&kp F>, <&kp G>;
-        };
-
-        hij: t9hij {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp H>, <&kp I>, <&kp J>;
-        };
-
-        lmx: t9lmx {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp L>, <&kp M>, <&kp X>;
-        };
-
-        nopq: t9nopq {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp N>, <&kp O>, <&kp P>, <&kp Q>;
-        };
-
-        rsk: t9rsk {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp R>, <&kp S>, <&kp K>;
-        };
-
-        tuvz: t9tuvz {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp T>, <&kp U>, <&kp V>, <&kp Z>;
-        };
-
-        spDlt: t9spDlt {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp SPACE>, <&kp BACKSPACE>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-                &aby     &cdw       &efg
-                &hij     &lmx       &nopq
-                &rsk     &tuvz      &spDlt
+                &kp A    &kp B       &kp C
+                &kp D    &kp E       &kp F
+                &sl 1    &sl 3       &sl 2
             >;
         };
 
-        TYPELAYER {
+        alpha1 {
             bindings = <
-                &kp R   &kp SPACE   &kp E
-                &kp J   &kp W   &kp L
-                &kp A   &kp S   &kp D
+                &kp G    &kp H       &kp I
+                &kp J    &kp K       &kp L
+                &to 0    &to 0       &to 0
             >;
         };
 
+        alpha2 {
+            bindings = <
+                &kp M    &kp N       &kp O
+                &kp P    &kp Q       &kp R
+                &to 0    &to 0       &to 0
+            >;
+        };
+
+        alpha3 {
+            bindings = <
+                &kp S    &kp T       &kp U
+                &kp V    &kp W       &kp X
+                &to 0    &to 0       &to 0
+            >;
+        };
+
+        alpha4 {
+            bindings = <
+                &kp Y    &kp Z       &kp U
+                &kp V    &kp W       &kp X
+                &to 0    &to 0       &to 0
+            >;
+        };
     };
 };

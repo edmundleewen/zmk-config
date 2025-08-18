@@ -10,7 +10,31 @@ rsk    tuvz     space / delete
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define DEFAULT 0
+#define TYPELAYER 1
+
 / {
+
+    combos {
+        compatible = "zmk,combos";
+        combo_layerUp {
+            timeout-ms = <50>;
+            key-positions = <0 1 2>;
+            bindings = <&to TYPELAYER>;
+        };
+
+        combo_layerDown {
+            timeout-ms = <50>;
+            key-positions = <6 7 8>;
+            bindings = <&to DEFAULT>;
+        };
+
+        combo_layerBootLoader {
+            timeout-ms = <50>;
+            key-positions = <3 4 5>;
+            bindings = <&bootloader>;
+        };
+    };
 
     behaviors {
         aby: t9aby {
@@ -85,6 +109,14 @@ rsk    tuvz     space / delete
                 &aby     &cdw       &efg
                 &hij     &lmx       &nopq
                 &rsk     &tuvz      &spDlt
+            >;
+        };
+
+        TYPELAYER {
+            bindings = <
+                &kp R   &kp SPACE   &kp E
+                &kp J   &kp W   &kp L
+                &kp A   &kp S   &kp D
             >;
         };
 
