@@ -1,8 +1,6 @@
 /*
 
-aby    cdw      efg
-hij    lmx      nopq
-rsk    tuvz     space / delete
+
 
 */
 
@@ -11,10 +9,6 @@ rsk    tuvz     space / delete
 #include <dt-bindings/zmk/bt.h>
 
 #define DEFAULT 0
-#define alpha1 1
-#define alpha2 2
-#define alpha3 3
-#define alpha4 4
 
 / {
     keymap {
@@ -22,41 +16,9 @@ rsk    tuvz     space / delete
 
         default_layer {
             bindings = <
-                &kp A    &kp B       &kp C
-                &kp D    &kp E       &kp F
-                &sl 1    &sl 3       &sl 2
-            >;
-        };
-
-        alpha1 {
-            bindings = <
-                &kp G    &kp H       &kp I
-                &kp J    &kp K       &kp L
-                &to 0    &to 0       &to 0
-            >;
-        };
-
-        alpha2 {
-            bindings = <
-                &kp M    &kp N       &kp O
-                &kp P    &kp Q       &kp R
-                &to 0    &to 0       &to 0
-            >;
-        };
-
-        alpha3 {
-            bindings = <
-                &kp S    &kp T       &kp U
-                &kp V    &kp W       &kp X
-                &to 0    &to 0       &to 0
-            >;
-        };
-
-        alpha4 {
-            bindings = <
-                &kp Y    &kp Z       &kp U
-                &kp V    &kp W       &kp X
-                &to 0    &to 0       &to 0
+                &kp R   &kp SPACE   &kp E
+                &kp J   &kp W   &kp L
+                &kp A   &kp S   &kp D
             >;
         };
     };
